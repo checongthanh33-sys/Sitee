@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEXUS GAMING STORE</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#08030f;color:white;font-family:Arial,sans-serif}
+a{text-decoration:none;color:white}
+button{cursor:pointer;font-weight:bold}
+header{background:#10051c;border-bottom:2px solid #a020ff}
+.top{max-width:1500px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.logo{font-size:32px;font-weight:1000;font-style:italic;color:#e6a0ff;text-shadow:0 0 15px #a000ff}
+.logo small{display:block;font-size:14px;color:white}
+.slogan{color:#ff8aff;font-weight:bold;font-style:italic}
+.balance{border:1px solid #a43bff;padding:12px;border-radius:10px}
+.btn{border:0;border-radius:9px;padding:12px 18px;color:white;background:linear-gradient(90deg,#6800dc,#c000ff);box-shadow:0 0 12px #9d00ff}
+nav{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:10px}
+nav a{padding:13px 17px;border-radius:9px;font-weight:bold}
+nav a:hover,nav a:first-child{background:linear-gradient(90deg,#8500fa,#4d00bd)}
+.hero{height:280px;background:#170827 url("assets/banner.jpg") center/cover no-repeat;border-bottom:2px solid #a020ff}
+.main{max-width:1500px;margin:15px auto;padding:0 15px;display:grid;grid-template-columns:245px 1fr 300px;gap:14px}
+.panel{background:linear-gradient(145deg,#1c0d30,#0b0615);border:1px solid #8428d2;border-radius:12px;overflow:hidden;box-shadow:0 0 15px #8700ff33}
+.heading{padding:15px;border-bottom:1px solid #8428d2;font-size:19px;font-weight:900;color:#f1d8ff}
+.menu a{display:block;padding:14px;border-bottom:1px solid #ffffff15;font-weight:bold}
+.menu a:hover,.menu .active{background:linear-gradient(90deg,#8300ef,#2b0c4d)}
+.support{text-align:center;padding:15px;margin-top:14px}
+.support strong{display:block;font-size:23px;margin:8px}
+.zalo{display:inline-block;background:#087cf0;padding:10px 15px;border-radius:25px}
+.products{padding:12px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.product{border:1px solid #a13bea;border-radius:12px;overflow:hidden;background:#120820}
+.product img{width:100%;height:145px;object-fit:cover;display:block}
+.pbody{padding:11px}
+.pbody h3{font-size:15px}
+.price{font-size:25px;font-weight:900;color:#ffdc35;margin:10px 0}
+.checks{font-size:13px;line-height:1.8;min-height:75px}
+.checks span{color:#39ff9a}
+.buy{width:100%;padding:12px 5px;border:1px solid #e37aff;border-radius:9px;background:linear-gradient(90deg,#6800dc,#b000ff);color:white}
+.rightpart{padding:13px;border-bottom:1px solid #65249b}
+.rightpart h3{font-size:16px;color:#f2dcff}
+input,select{width:100%;padding:12px;background:#090612;color:white;border:1px solid #63358c;border-radius:8px;margin:5px 0}
+.rightpart button{width:100%;margin-top:7px}
+.network{display:flex;justify-content:space-around;color:#28d9ff;font-weight:bold;margin:12px}
+.benefits{max-width:1500px;margin:15px auto;padding:0 15px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.benefit{border:1px solid #982be8;border-radius:12px;background:#160923;padding:17px;text-align:center;font-weight:bold}
+footer{text-align:center;padding:22px;background:#07030c;border-top:1px solid #a52bff;color:#d1c0e2}
+.float{position:fixed;right:15px;bottom:15px;background:#087cf0;border-radius:25px;padding:13px 18px;font-weight:bold}
+@media(max-width:1050px){
+.main{grid-template-columns:210px 1fr}
+.rightcol{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr)}
+.rightcol .heading{grid-column:1/-1}
+.grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:650px){
+.top{justify-content:center;text-align:center}
+.slogan{display:none}
+.logo{font-size:27px}
+nav a{font-size:12px;padding:10px}
+.hero{height:190px}
+.main{display:flex;flex-direction:column;padding:0 9px}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.product img{height:105px}
+.pbody{padding:8px}
+.pbody h3{font-size:12px}
+.price{font-size:19px}
+.checks{font-size:11px;min-height:65px}
+.buy{font-size:12px}
+.rightcol{display:block}
+.benefits{grid-template-columns:repeat(2,1fr);padding:0 9px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="top">
+<div class="logo">♛ NEXUS<small>GAMING STORE</small></div>
+<div class="slogan">SHOP ACC GAME UY TÍN<br>NẠP THẺ - NẠP GAME GIÁ RẺ</div>
+<div class="balance">👤 Tài khoản　|　🪙 Số dư: 0đ</div>
+<button class="btn" onclick="alert('Chức năng tài khoản cần máy chủ riêng')">Đăng xuất</button>
+</div>
+<nav>
+<a href="#home">⌂ Trang chủ</a>
+<a href="#shop">🛒 Mua acc</a>
+<a href="#card">▣ Nạp thẻ</a>
+<a href="#topup">💎 Nạp game</a>
+<a href="#wallet">👛 Ví của tôi</a>
+<a href="#history">◷ Lịch sử</a>
+<a href="#admin">⚙ Admin</a>
+<a href="https://zalo.me/0933454413">Zalo 0933454413</a>
+</nav>
+</header>
+
+<div class="hero" id="home"></div>
+
+<main class="main">
+
+<aside>
+<div class="panel menu">
+<div class="heading">▦ DANH MỤC DỊCH VỤ</div>
+<a class="active" href="#shop">🛒 Mua Acc Free Fire</a>
+<a href="#card">▣ Nạp Thẻ Mobifone</a>
+<a href="#card">🔥 Nạp Thẻ Garena</a>
+<a href="#topup">💎 Nạp Kim Cương FF</a>
+<a href="#topup">🏅 Nạp Quân Huy LQ</a>
+<a href="#wallet">👛 Nạp Tiền Vào Ví</a>
+</div>
+<div class="panel support">
+<div class="zalo">Zalo</div>
+<p>HỖ TRỢ NHANH</p>
+<strong>0933454413</strong>
+<a href="https://zalo.me/0933454413">Chat ngay để được hỗ trợ</a>
+</div>
+</aside>
+
+<section class="panel" id="shop">
+<div class="heading">🛒 SHOP ACC FREE FIRE</div>
+<div class="products">
+<div class="grid" id="products"></div>
+</div>
+</section>
+
+<aside class="panel rightcol">
+<div class="heading">💎 NẠP GAME</div>
+
+<div class="rightpart" id="topup">
+<h3>💎 NẠP KIM CƯƠNG FREE FIRE</h3>
+<input id="ffid" placeholder="Nhập ID của bạn...">
+<button class="btn" onclick="gameOrder('Free Fire','ffid')">NẠP NGAY ›</button>
+</div>
+
+<div class="rightpart">
+<h3>🏅 NẠP QUÂN HUY LIÊN QUÂN</h3>
+<input id="lqid" placeholder="Nhập ID của bạn...">
+<button class="btn" onclick="gameOrder('Liên Quân','lqid')">NẠP NGAY ›</button>
+</div>
+
+<div class="rightpart" id="card">
+<h3>▣ NẠP THẺ CÀO</h3>
+<select id="provider">
+<option value="">Chọn nhà mạng...</option>
+<option>Mobifone</option>
+<option>Garena</option>
+</select>
+<select id="amount">
+<option>10.000đ</option>
+<option>20.000đ</option>
+<option>50.000đ</option>
+<option>100.000đ</option>
+<option>200.000đ</option>
+<option>500.000đ</option>
+</select>
+<button class="btn" onclick="cardOrder()">NẠP NGAY ›</button>
+<div class="network">
+<span>mobiFone</span>
+<span>🔥 Garena</span>
+</div>
+<small>Không nhập mã thẻ hoặc serial trên website.</small>
+</div>
+</aside>
+</main>
+
+<section class="benefits">
+<div class="benefit">🛡 Cam Kết<br>Uy Tín 100%</div>
+<div class="benefit">🚀 Giao Dịch<br>Siêu Tốc</div>
+<div class="benefit">🎁 Nhiều Ưu Đãi<br>Hấp Dẫn</div>
+<div class="benefit">🎧 Hỗ Trợ 24/7<br>Qua Zalo</div>
+</section>
+
+<footer>
+<h2>♛ NEXUS GAMING STORE</h2>
+<p>© 2026 Nexus Gaming Store. All rights reserved.</p>
+<p>Điều Khoản　|　Chính Sách Bảo Mật　|　Liên Hệ</p>
+</footer>
+
+<a class="float" href="https://zalo.me/0933454413">Zalo 0933454413</a>
+
+<script>
+const products=[
+["ACC FREE FIRE 999K",999000,"assets/acc1.jpg",["Nhiều skin hiếm","Rank cao","Bảo hành trọn đời"]],
+["ACC FREE FIRE 499K",499000,"assets/acc2.jpg",["Nhiều trang phục","Rank tốt","Bảo hành uy tín"]],
+["ACC FREE FIRE 399K",399000,"assets/acc3.jpg",["Nhiều skin đẹp","Rank ổn định","Bảo hành uy tín"]],
+["ACC FREE FIRE 99K",99000,"assets/acc4.jpg",["Skin cơ bản","Phù hợp tân thủ","Bảo hành 7 ngày"]]
+];
+
+const money=n=>n.toLocaleString("vi-VN")+"đ";
+
+document.getElementById("products").innerHTML=
+products.map((p,i)=>`
+<article class="product">
+<img src="${p[2]}" alt="${p[0]}">
+<div class="pbody">
+<h3>${p[0]}</h3>
+<div class="price">${money(p[1])}</div>
+<div class="checks">
+${p[3].map(t=>`<div><span>✔</span> ${t}</div>`).join("")}
+</div>
+<button class="buy" onclick="buy(${i})">🛒 MUA NGAY</button>
+</div>
+</article>
+`).join("");
+
+function contact(message){
+window.open("https://zalo.me/0933454413?text="+encodeURIComponent(message),"_blank");
+}
+
+function buy(i){
+contact("Tôi muốn hỏi mua "+products[i][0]+" giá "+money(products[i][1]));
+}
+
+function gameOrder(game,id){
+let value=document.getElementById(id).value.trim();
+if(!value){alert("Vui lòng nhập ID game");return}
+contact("Tôi muốn hỏi nạp "+game+" cho ID "+value);
+}
+
+function cardOrder(){
+let provider=document.getElementById("provider").value;
+let amount=document.getElementById("amount").value;
+if(!provider){alert("Vui lòng chọn nhà mạng");return}
+contact("Tôi muốn hỏi nạp "+provider+" mệnh giá "+amount);
+}
+</script>
+</body>
+</html>
